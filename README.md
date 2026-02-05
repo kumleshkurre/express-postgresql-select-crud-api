@@ -26,8 +26,8 @@ This project demonstrates how to connect Express with PostgreSQL, perform CRUD o
 ---
 
 ## 📂 Project Structure
-```
-express-postgresql-crud-api
+```js
+Express-postgresql-crud-api
 │
 ├── db.js # PostgreSQL connection pool
 ├── index.js # Express server & API routes
@@ -35,7 +35,7 @@ express-postgresql-crud-api
 └── README.md
 ```
 ## ⚙️ Configure the PostgreSQL connection pool (`db.js`)
-```
+```js
 const { Pool } = require('pg');
 const pool = new Pool({
    user: 'your_username',
@@ -50,7 +50,7 @@ const pool = new Pool({
 ```
 ## Create Your Express Server
 Create a file: index.js
-```
+```js
 // index.js
 const express = require('express');
 const pool = require('./db');        
@@ -115,27 +115,27 @@ app.get('/employeBy', async (req, res) => {
   ```
 ## 🚀 API Endpoints
 🔹 Test API
-```
+```css
 http://localhost:1000
 ```
  Response:
- ```
+ ```css
 <h1>EXPRESS JS API</h1>
 ```
 🔹 Get All Employees
-```
+```css
 http://localhost:1000/employe
 ```
 🔹 Get Employee By ID (URL Parameter)
-```
+```css
 http://localhost:1000/employe/1
 ```
 🔹 Get Employee By ID (Request Body)
-```
+```css
 http://localhost:1000/employeBy
 ```
 Body:
-```
+```js
 {
   "id": 1
 }
