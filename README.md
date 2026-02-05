@@ -88,7 +88,7 @@ app.get('/employe', async (req, res) => {
   app.get('/employe/:id', async (req, res) => {
     try {
       const { id } = req.params; // Get 'id' from route parameters
-      const result = await pool.query('SELECT * FROM emp.jsloye WHERE id = $1', [id]); // Adjust query to your table
+      const result = await pool.query('SELECT * FROM employe WHERE id = $1', [id]); // Adjust query to your table
       res.json(result.rows);
     } catch (err) {
       console.error('Error executing query', err.stack);
